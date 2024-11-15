@@ -33,5 +33,5 @@ const results = cronometro({
     new B_2()
   }
 }, {
-  iterations: 1000 * 1000
+  iterations: 100 * 1000 * 1000
 })
