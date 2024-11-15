@@ -1,4 +1,4 @@
-import cronometro from 'cronometro'
+import { bench, group, run } from 'mitata'
 
 class A_1 {
   constructor () {
@@ -25,13 +25,12 @@ function B_2 () {
 Object.setPrototypeOf(B_2.prototype, A_2.prototype)
 Object.setPrototypeOf(B_2, A_2)
 
-const results = cronometro({
-  classes () {
-    new B_1()
-  },
-  functions () {
-    new B_2()
-  }
-}, {
-  iterations: 1000 * 1000 * 1000
+bench('classes', () => {
+  const a = new B_1()
 })
+
+bench('functions', () => {
+  const b = new B_2()
+})
+
+await run()
