@@ -4,7 +4,7 @@ This experiment is to determine if using `class` carries any performance benefit
 compared to old school inheritance. According to the results of this tests,
 it does not.
 
-Cronometro output:
+### Cronometro output:
 
 
 ```
@@ -19,7 +19,9 @@ Cronometro output:
 ╚══════════════╧═══════════╧════════════════════╧═══════════╝
 ```
 
-Mitata output:
+Thise results were taken on Node.js v22.9.0 on dedicated HW.
+
+### Mitata output:
 
 ```
 clk: ~3.96 GHz
@@ -33,8 +35,6 @@ classes                  18.28 ns/iter  18.24 ns         █
 functions                 8.65 ns/iter   8.44 ns ▆█
                   (7.93 ns … 54.39 ns)  24.59 ns ██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
 ```
-
-These results were taken on Node.js v22.9.0 on dedicated HW.
 
 Please send PRs to add more cases, this is more of a learning experience than anything else.
 
